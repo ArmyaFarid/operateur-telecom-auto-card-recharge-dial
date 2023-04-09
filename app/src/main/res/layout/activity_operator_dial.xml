@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.OperatorDialActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_main_ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/txt_loginInfo"
+            style="@style/text_style"
+            android:textSize="20dp"
+            android:text="Welcome " />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_main_cl_main"
+        android:layout_width="match_parent"
+        android:layout_height="637dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_ll_header">
+
+        <LinearLayout
+            android:id="@+id/activity_main_ll_type_number"
+            style="@style/ll_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@+id/activity_main_cl_main">
+
+            <TextView
+                android:id="@+id/txt_type_phone"
+                style="@style/text_style"
+                android:text="Saisir votre numero de telephone" />
+
+            <EditText
+                android:id="@+id/edt_type_phone"
+                style="@style/editText_style" />
+
+            <TextView
+                android:id="@+id/txt_operatorName"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Votre ligne sera automatiquement detecte" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_main_ll_recharge"
+            style="@style/ll_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/activity_main_ll_type_number">
+
+            <TextView
+                android:id="@+id/txt_type_code_label"
+                style="@style/text_style"
+                android:text="Entrez votre code de recharge" />
+
+            <EditText
+                android:id="@+id/edt_type_code"
+                style="@style/editText_style" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_main_ll_dial"
+            style="@style/ll_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/activity_main_ll_recharge">
+
+            <TextView
+                android:id="@+id/txt_fullCodeGenerate"
+                style="@style/text_style"
+                android:text="Recharger votre ligne" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/edt_fullCodeFill"
+                    style="@style/editText_style" />
+
+                <Button
+                    android:id="@+id/btn_play_recharge"
+                    style="@style/callButton_style" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_main_ll_solde"
+            style="@style/ll_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/activity_main_ll_dial">
+
+            <TextView
+                android:id="@+id/txt_checkSolde"
+                style="@style/text_style"
+                android:text="Pour consulter votre solde" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edt_soldeCodeAutoFill"
+                    style="@style/editText_style"
+                    android:layout_width="100dp" />
+
+                <Button
+                    android:id="@+id/btn_play_checkSolde"
+                    style="@style/callButton_style" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
